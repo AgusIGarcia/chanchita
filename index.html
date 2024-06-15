@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reproductor de Audio Personalizado</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="top-left content-container message">
+        <p>Drag an audio file and drop it into the CD player of the 'Chanchita'.</p>
+        <p>Then, enjoy.</p>
+    </div>
+    <div id="drop-zone" class="cd-lector drop-zone">
+      <input type="file" id="file-input" accept="audio/*" />
+    </div>
+
+    <div class="text-container">
+      <div id="scrolling-text" class="scrolling-text"></div>
+    </div>
+
+    <div class="bottom-right content-container reproductor">
+      <div class="row">
+        <button id="play-pause" class="control-button">
+          <i class="fas fa-play"></i>
+        </button>
+        <input type="range" id="seek-bar" value="0" min="0" />
+        <span id="seek-bar-value" class="time-tracker">0:00 / 0:00</span>
+      </div>
+      <div class="row">
+        <label for="volume-control">Volume: </label>
+        <input
+          type="range"
+          id="volume-control"
+          min="0"
+          max="1"
+          step="0.01"
+          value="1"
+        />
+        <button id="mute-button" class="control-button">
+          <i class="fas fa-volume-up"></i>
+        </button>
+      </div>
+    </div>
+
+    <audio id="audio-player" style="display: none"></audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>

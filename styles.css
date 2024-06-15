@@ -1,0 +1,133 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f8ff;
+  background-image: url("./assets/chanchita.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.cd-lector {
+  position: absolute;
+  top: 21vh;
+  left: 37.5vw;
+  width: 25.5vw;
+  height: 11.5vh;
+  border-radius: 20vh / 4vw;
+}
+
+.drop-zone {
+  background: transparent;
+  transition: background 2s ease;
+}
+
+.drop-zone.drop-zone-hover {
+  background: radial-gradient(
+    circle,
+    rgba(190, 211, 251, 0.5) 0%,
+    rgba(56, 96, 178, 0.5) 50%,
+    rgba(0, 255, 255, 0) 100%
+  );
+  border-radius: 20vh / 4vw;
+}
+
+#file-input {
+  display: none;
+}
+
+.bottom-right {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+
+.top-left {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}
+
+.message {
+  padding: 5px;
+}
+
+.content-container {
+  text-align: center;
+  border: 2px solid rgba(56, 96, 178, 1);
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.reproductor {
+  width: 400px;
+  padding: 20px;
+}
+
+.control-button {
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #fff;
+  background-color: rgba(56, 96, 178, 1);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.control-button:hover {
+  background-color: #005fa3;
+}
+
+#seek-bar,
+#volume-control {
+  width: 100%;
+  max-width: 300px;
+  margin: 10px 0;
+}
+
+.time-tracker {
+  text-wrap: nowrap;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+
+.text-container {
+  position: absolute;
+  padding-bottom: 20px;
+  top: 46.5vh;
+  left: 47vw;
+  width: 7.5vw;
+  height: 5vh;
+  overflow: hidden;
+}
+
+.scrolling-text {
+  font-size: xx-large;
+  color: white;
+  white-space: nowrap;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  animation: scrollText 10s linear infinite;
+  font-family: "Courier New", Courier, monospace;
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
