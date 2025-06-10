@@ -10,10 +10,13 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
   </head>
-  <body>
+  <body class="blue-theme">
     <div class="top-left content-container message">
-        <p>Drag an audio file and drop it into the CD player of the 'Chanchita'.</p>
-        <p>Then, enjoy.</p>
+      <p>
+        Drag an audio file and drop it into the CD player of the 'Chanchita'.
+      </p>
+      <p>Use ← → buttons to change themes and backgrounds.</p>
+      <p>Then, enjoy.</p>
     </div>
     <div id="drop-zone" class="cd-lector drop-zone">
       <input type="file" id="file-input" accept="audio/*" />
@@ -45,6 +48,14 @@
           <i class="fas fa-volume-up"></i>
         </button>
       </div>
+    </div>
+    <div class="navigation-buttons">
+      <button id="next-bg" class="nav-button">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button id="prev-bg" class="nav-button">
+        <i class="fas fa-chevron-right"></i>
+      </button>
     </div>
 
     <audio id="audio-player" style="display: none"></audio>
